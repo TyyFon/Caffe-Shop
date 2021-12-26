@@ -16,7 +16,12 @@ const classNames = {
   nav:{
     active: 'active'
   }
-}
+};
+const settings = {
+  db: '//localhost:3131',
+  products: 'products',
+  contact: 'contact'
+};
 
 const app = {
   initPages: function(){
@@ -62,8 +67,8 @@ const app = {
   },
 
   init: function(){
-  const thisApp = this;
-  thisApp.initPages();
+    const thisApp = this;
+    thisApp.initPages();
   },
 };
 app.init();
