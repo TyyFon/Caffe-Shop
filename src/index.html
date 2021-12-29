@@ -35,27 +35,48 @@
 	</header>
 	<h1 class="subtitle">PRODUCTS</h1>
 	<div id="pages">
+		<script id="text-template" type="text/x-handlebars-template">
+			<div class=product-text>	
+				<p class="number"> {{ number }}.</p>
+				<p class="name"> {{ name }} </p>
+				<p class="decription"> {{ description }}</p>
+				<p class="roasting">ROASTING: {{ roasting }}/10</p>
+				<p class="intensity">INTENSITY: {{intensity}}/10</p>
+				<img class="most-popular" src="Images/mostpopular.png">
+			</div>
+			<div class=product-image><img class="product-image" src={{ image }}></div>
+		</script>
+		
 		<section id="home" class="container home-wraper">
 			<div class="home-wraper container">
 				<h1>Home</h1>
-				<div class="text"></div>
-				<div class="image"></div>
+				<div class="product">
+					<div class="home-text"></div>
+				</div>
 			</div>
 		</section>
-		<section id="product" class="container products-wraper">
-			<div class="home-wraper container">
+		<section id="product">
+			<div class="product-wraper container">
 				<h1>Products</h1>
-				<div class="text"></div>
-				<div class="image"></div>
+				<div class="product">
+					<div class="text"></div>
+				</div>
 			</div>
 		</section>
 		<section id="contact" class="container contact-wraper">
 			<div class="home-wraper container">
 				<h1>Contact</h1>
+				<h3>NAME</h3>
+				<input type="text" class="input name">
+				<h3>TITLE</h3>
+				<input type="text" class="input title">
+				<h3>MESSAGE</h3>
+				<input type="text" class="input message">
 			</div>
 		</section>
 
 	</div>
 	<script src="js/app.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
 	</body>
 </html>

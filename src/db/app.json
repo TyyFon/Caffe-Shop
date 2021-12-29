@@ -1,60 +1,67 @@
 {
     "products":[
         {
-            "id":"01",
+            "id":"1",
             "name":"LA LAGARTIJA",
             "description":" Mysterious and treacherous... The best choice for the start of yuou journey! It will provide you a rich delicous flavour",
             "roasting":"5",
             "intensity":"6",
-            "most popular":"true",
+            "most_popular":"true",
             "image":[
-                "<img class=\"product-img\" src=\"Images/coffee-1.png\">"
+                "Images/coffee-1.png"
             ]
         },
         {
-            "id":"02",
+            "id":"2",
             "name":"EL TIGRE",
             "description":"Realy dark caffe, only fo the realgourments. It has bitter flavour of grapefruit and is mixed with little bit ofpeanuts with carmel",
             "roasting":"8",
             "intensity":"9",
-            "most popular":"false",
+            "most_popular":"false",
             "image":[
-                "<img class=\"product-img\" src=\"Images/coffee-2.png\">"
+                "Images/coffee-2.png"
             ]
         },
         {
-            "id":"03",
+            "id":"3",
             "name":"LA CUCARACHA",
             "description":"Sweet and intense with a bif amount of differnt flavours. Carme, grapes,strawberry, you name it! It's greate choise for warm summer days",
             "roasting":"3",
             "intensity":"7",
-            "most popular":"false",
+            "most_popular":"false",
             "image":[
-                "<img class=\"product-img\" src=\"Images/coffee-3.png\">"
+                "Images/coffee-3.png"
             ]
         },
         {
-            "id":"04",
+            "id":"4",
             "name":"LA LAGARTIJA",
             "description":" The same what is written in first box, but here I need new product so I add the same imaga but different notice",
             "roasting":"3",
             "intensity":"2",
-            "most popular":"false",
+            "most_popular":"false",
             "image":[
-                "<img class=\"product-img\" src=\"Images/coffee-1.png\">"
+                "Images/coffee-1.png"
             ]
         },
         {
-            "id":"05",
+            "id":"12",
             "name":"LA CUCARACHA",
             "description":"the same situation as below, but for the La Cucaracha",
             "roasting":"6",
             "intensity":"2",
-            "most popular":"false",
+            "most_popular":"false",
             "image":[
-                "<img class=\"product-img\" src=\"Images/coffee-3.png\">"
+                "Images/coffee-3.png"
             ]
         }
     ],
-    "contact":[]
+    "contact":[
+        {
+            "id": "1",
+            "name": "Tyy",
+            "title": "Test",
+            "message": "Testing, testing, testing"
+        }
+    ]
 } 
