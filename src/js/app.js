@@ -76,16 +76,13 @@ class Product{
     if (thisProduct.data.id <=3){
     
       const homeHTML = generatedTextHTML(productData);
-    //console.log(homeHTML);
       const homeDomElement = document.querySelector('.home-text');
       homeDomElement.insertAdjacentHTML('beforebegin', homeHTML);
     }
-   
-    
-    
-    
+    if (thisProduct.data.id % 2 === 0){
+      document.querySelector('.product-text').classList.add('.left');
+    }
   }
-  
 }
   
 const app = {
@@ -93,6 +90,7 @@ const app = {
     const thisApp = this;
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
+    thisApp.btn = document.querySelector('.btn');
     
     const idFromHash = window.location.hash.replace('#/' , '');
     
@@ -116,6 +114,38 @@ const app = {
         window.location.hash = '#/' + id;
       });
     }
+    thisApp.btn.addEventListener('click' , function(event){
+      event.preventDefault();
+      const url = settings.db + '/' + settings.contact;
+      console.log(url);
+            
+      const contactName = document.getElementById('contactName').value;
+      //console.log(contactName);
+      const contactTitle = document.getElementById('contactTitle').value;
+      const contactMessage = document.getElementById('contactMessage').value;
+      
+      fetch(url)        
+        .then(function(contact){
+          return contact.json();
+        })
+        .then(function(data) {
+          console.log(data.length);
+          let contactForm = {
+            id: data.length + 1,
+            name: contactName,
+            title: contactTitle,
+            message: contactMessage
+          };
+          fetch(url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },           
+            body: JSON.stringify(contactForm)
+          });    
+        });
+    });
+    
   },
 
   activatePage: function(pageId){
@@ -130,6 +160,7 @@ const app = {
       );
     }
   },
+
   
   initMenu: function(){
     const thisApp = this;
