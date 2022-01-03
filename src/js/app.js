@@ -42,7 +42,7 @@ class Product{
     }
 
     const mostPopular = document.querySelector('.most-popular');
-    //console.log(thisProduct.data.id , mostPopular);
+    console.log('thisProductData.id:' , thisProduct.data.id , 'mostPopular:' , mostPopular);
     if (thisProduct.data.most_popular == true){
       mostPopular.classList.add(classNames.img.active);
       //console.log('prawda');
@@ -80,7 +80,7 @@ class Product{
       homeDomElement.insertAdjacentHTML('beforebegin', homeHTML);
     }
     if (thisProduct.data.id % 2 === 0){
-      document.querySelector('.product-text').classList.add('.left');
+      document.querySelector('.product-text').classList.add('left');
     }
   }
 }
