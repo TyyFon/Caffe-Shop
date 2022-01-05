@@ -41,15 +41,7 @@ class Product{
     } else {productNumber = thisProduct.id;
     }
 
-    const mostPopular = document.querySelector('.most-popular');
-    console.log('thisProductData.id:' , thisProduct.data.id , 'mostPopular:' , mostPopular);
-    if (thisProduct.data.most_popular == true){
-      mostPopular.classList.add(classNames.img.active);
-      //console.log('prawda');
-    //} else {
-      //console.log('fałsz');
-    }
-    //console.log(thisProduct.data.most_popular);
+    
 
     
     const textSource = document.getElementById('text-template').innerHTML;
@@ -72,6 +64,16 @@ class Product{
     const textDomElement = document.querySelector('.text');
     
     textDomElement.insertAdjacentHTML('beforebegin', productTextHTML);
+
+    const mostPopular = document.querySelector('.most-popular');
+    console.log('thisProductData.id:' , thisProduct.data.id , 'mostPopular:' , mostPopular);
+    if (thisProduct.data.most_popular == 'true'){
+      mostPopular.classList.add(classNames.img.active);
+      //console.log('prawda');
+    //} else {
+      //console.log('fałsz');
+    }
+    //console.log(thisProduct.data.most_popular);
     
     if (thisProduct.data.id <=3){
     
