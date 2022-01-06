@@ -66,7 +66,7 @@ class Product{
     textDomElement.insertAdjacentHTML('beforebegin', productTextHTML);
 
     const mostPopular = document.querySelector('.most-popular');
-    console.log('thisProductData.id:' , thisProduct.data.id , 'mostPopular:' , mostPopular);
+    //console.log('thisProductData.id:' , thisProduct.data.id);
     if (thisProduct.data.most_popular == 'true'){
       mostPopular.classList.add(classNames.img.active);
       //console.log('prawda');
@@ -82,6 +82,7 @@ class Product{
       homeDomElement.insertAdjacentHTML('beforebegin', homeHTML);
     }
     if (thisProduct.data.id % 2 === 0){
+      console.log(thisProduct.data.id , thisProduct.data.name);
       document.querySelector('.product-text').classList.add('left');
     }
   }

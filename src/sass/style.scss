@@ -26,19 +26,22 @@ body {
 .header {
   background-image: url("/images/background.png");
   background-repeat: no-repeat;
-  background-position: top-left;
+  background-position: top;
   width: 100%;
   height: 1020px;
-  display: flex;
+
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   .navigation {
-    display: inline-block;
-    index-z: 1; 
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .navi{
-    display: inline-flex;
-  }
 }
 
 
@@ -47,9 +50,8 @@ body {
   font-weight: 700;
   color: $color-white;
   font-size: 36px;
-  padding-left: 200px;
-  min-width: fit-content;
   letter-spacing: 6px;
+  margin: 0;
 
   span {
     margin-top: 0;
@@ -59,14 +61,18 @@ body {
   }
 }
 
+.navbar-nav {
+  padding: 0;
+  margin: 0;
+}
+
 ul {
   list-style: none;
   font-family: $font-text;
   font-weight: 400;
-  padding-left: 600px;
-  padding-top: 80px;
-  min-width: fit-content;
   word-spacing: 20px;
+  padding: 0;
+  margin: 0;
 
   li {
     display: inline-block;
@@ -84,24 +90,31 @@ ul {
 .splash-inner {
   color: $color-gold;
   font-family: $font-text;
-  position: absolute;
-  padding-left: 200px;
-  padding-top: 70px;
-  z-index: 0;
-  
+  padding-top: 160px;
+
+  h1, h2 {
+    font-size: 100px;
+    margin: 0;
+  }
+
   h1{
-    font-size: 120px;
     font-weight: 700;
     letter-spacing: 12px;
-    margin-top: -15px;
-    padding-left: 130px;
+    padding-left: 180px;
+  }
+  h1::after {
+    position: absolute;
+    content: '';
+    bottom: 260px;
+    left: 45%;
+    width: 250px;
+    height: 5px;
+    transform: translateX(-50%);
+    background: $color-gold; 
   }
 
   h2{
-    padding-top: 120px;
     font-weight: 700;
-    margin-bottom: 0;
-    font-size: 120px;
     letter-spacing: 12px;
   }
 
@@ -110,22 +123,91 @@ ul {
     font-weight: 400;
     font-size: 40px;
     letter-spacing: 5px;
-    padding-left: 520px;
-    padding-top: 190px;
+    margin: 0;
+    padding: 280px 0 0 580px;
   }
 
-  .fa-thin {
+  /*.fa-thin {
     color: $color-white;
     font-size: 40px;
     padding-left: 520px;
     padding-top: 190px;
-  }
-
+  }*/
 }
-.product {
+.subtitle {
+  font-family: $font-text;
+  color:$color-gold;
+  font-weight: 600;
+  font-size: 80px;
+  letter-spacing: 12px;
+  left: 50%;
+}
+.subtitle::after {
+  position: absolute;
+  content: '';
+  bottom: -440px;
+  left: 50%;
+  width: 500px;
+  height: 5px;
+  transform: translateX(-50%);
+  background: $color-gold; 
+}
+
+.home-wraper {
   display: flex;
-  .home-text {
-    flex-direction: row;
-  }
+  direction: column;
 }
+.product-text:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.product-text {
+  display: flex;
+  //flex-direction: row;
+  justify-content: center;
+  margin-bottom: 60px;
+  
+}
+.content {
+  max-width: 40%;
+}
+.product-image {
+  margin-right: 20px;
+}
+.number {
+  font-family: $font-text;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+/*.number::after {
+  position: absolute;
+  content: '';
+  bottom: -500px;
+  left: 10%;
+  width: 100px;
+  height: 5px;
+  transform: translateX(-50%);
+  background: $color-gold; 
+}*/
+.decription {
+  max-width: 90%;
+  font-family: $font-text;
+  margin: 0 0 60px 0;
+}
+.ratio-name {
+  font-family: $font-text;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0;
+ }
+.rating {
+  color: #BEA67C;
+}
+.most-popular {
+  width: 180px;
+  align-self: left;
+  float: right;
+  margin-right: 80px;
+  margin-top: -120px;
 
+}
